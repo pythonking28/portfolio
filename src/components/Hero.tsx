@@ -3,15 +3,18 @@ const Hero = () => {
   return (
     <div className="flex items-center justify-around gap-10 h-[90vh]">
         <div className="w-[40%]">
-            <div className="hero-text">
-                <h3>Hello, It's Me</h3>
-                <h1>Niraj Kumar Thakur</h1>
-                <h3>And I'm a Web Developer</h3>
+            <div className="text-3xl tracking-wide mb-5 font-bold">
+                <h3 className="">Hello, It's Me</h3>
+                <h1 className="text-6xl  tracking-wider">Niraj Kumar Thakur</h1>
+                <h3 className="leading-10">And I'm a <span className="text-cyan-600">Web Developer</span></h3>
             </div>
-            <p>I am a passionate Web Developer dedicated to leveraging emerging technologies to create innovative, user-centric web experiences. I thrive in dynamic environments, constantly adapting to new tech trends.</p>
+            <p className="tracking-wide text-justify text-lg">I'm an enthusiastic web developer that is committed to using new trends in technology to produce creative, user-centric websites. I thrive in dynamic environments, constantly adapting to new advancements.</p>
         </div>
-        <div className="w-[50%] h-[50%]">
-            <Image className="object-cover w-48 h-48" src="/images/profile.png" alt="Profile" width={200} height={200} />
+        <div className="flex items-center justify-center">
+          <div className="w-[50%] rounded-full shadow-[0_15px_60px_5px_rgba(cyan)] shadow-cyan-200 ">
+          <Image className="w-full border-4 rounded-full" src="/images/profileCrop.png" alt="Profile" width={500} height={500} />
+          </div>
+
         </div>
     </div>
   )
