@@ -1,7 +1,7 @@
 import Image from "next/image"
 const Skill = () => {
   return (
-    <div className="h-auto w-[100%] bg-gray-100">
+    <div className="h-auto w-[100%] pb-10 bg-gray-100">
         <h1 className="px-auto text-center mt-[0.5rem] pt-10 text-2xl sm:text-4xl lg:text-6xl font-bold">SKILLS</h1>
         <div className="flex flex-wrap gap-10 mx-auto w-[50%] md:gap-20 p-6 items-center justify-center flex-grow">
             <div className="border-solid border-2 p-6 flex flex-col justify-center items-center gap-4 rounded-2xl hover:shadow-lg hover:shadow-[#FF5733]">

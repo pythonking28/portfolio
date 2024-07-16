@@ -3,6 +3,43 @@
 @tailwind utilities;
 
 @layer components {
+    .project-code:hover::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: hsla(238, 100%, 71%, 0.6);
+
+        background: linear-gradient(0deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 0.6) 100%);
+
+        background: -moz-linear-gradient(0deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 0.6) 100%);
+
+        background: -webkit-linear-gradient(0deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 0.6) 100%);
+
+        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#696EFF", endColorstr="#F8ACFF", GradientType=1);
+        height: 100%;
+        width: 100%;
+        border-radius: 16px;
+        z-index: 1;
+    }
+
+    .project-code:hover .button-wrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 2;
+
+
+    }
+
+    .project-code:hover .button-wrapper button{
+        border: 1px solid #f0f8ff;
+        border-radius: 12px;
+        background-color: aliceblue;
+    }
 
 
 }
