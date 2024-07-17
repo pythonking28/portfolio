@@ -10,11 +10,11 @@ const Hero = () => {
                 <h3 className="">And I'm a <span className="text-cyan-600">Web Developer</span></h3>
             </div>
             <p className="tracking-wide text-justify text-[12px] sm:text-[15px] lg:text-lg">I'm an enthusiastic web developer that is committed to using new trends in technology to produce creative, user-centric websites. I thrive in dynamic environments, constantly adapting to new advancements.</p>
-            <div className="flex gap-10 mt-10 mb-5 h-auto justify-center items-center">
-              <Link href="https://www.linkedin.com/in/niraj-thakur-5bbaaa160/" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/linkedin.svg" alt="LinkedinProfile" width={36} height={36} className="w-9 h-auto"></Image></Link>
-              <Link href="https://github.com/pythonking28?tab=repositories" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/github.svg" alt="LinkedinProfile" width={36} height={36} className="w-9 h-auto"></Image></Link>
-              <Link href="https://www.facebook.com/niraj.thakur.52498/" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/facebook.svg" alt="LinkedinProfile" width={36} height={36} className="w-9 h-auto"></Image></Link>
-              <a href="/cv.pdf" target="_blank" download="cv" className="border rounded-full p-2 sm:p-4"><Image src="/images/cv.svg" alt="LinkedinProfile" width={24} height={24} className="w-9 h-auto"></Image></a>
+            <div className="flex gap-5 sm:gap-10 mt-10 mb-5 h-auto justify-center items-center">
+              <Link href="https://www.linkedin.com/in/niraj-thakur-5bbaaa160/" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/linkedin.svg" alt="LinkedinProfile" width={36} height={36} className="w-24 sm:w-9 h-auto"></Image></Link>
+              <Link href="https://github.com/pythonking28?tab=repositories" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/github.svg" alt="LinkedinProfile" width={36} height={36} className="w-24 sm:w-9 h-auto"></Image></Link>
+              <Link href="https://www.facebook.com/niraj.thakur.52498/" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/facebook.svg" alt="LinkedinProfile" width={36} height={36} className="w-24 sm:w-9 h-auto"></Image></Link>
+              <a href="/cv.pdf" target="_blank" download="cv" className="border rounded-full p-2 sm:p-4"><Image src="/images/cv.svg" alt="LinkedinProfile" width={24} height={24} className="w-24 h-auto"></Image></a>
             </div>
             
         </div>
