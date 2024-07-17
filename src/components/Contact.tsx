@@ -6,10 +6,10 @@ const Contact = () => {
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
+    const [failed, setFailed] = useState(false)
     const [error, setError] = useState(false)
     
     const submitHandler = async() => {
-        console.log("yes")
         if(!name || !email || !message){
             setError(true)
             return;
@@ -23,7 +23,15 @@ const Contact = () => {
 
         const data = await response.json()
         setLoading(false)
-        if(data.message){
+        if(data.status === 500 || data.status === 400){
+            setFailed(true)
+
+            setTimeout(()=>{
+                setFailed(false)
+            },2000)
+            
+        }
+        if(data.status === 200){
             setSuccess(true)
 
             setTimeout(()=>{
@@ -40,9 +48,10 @@ const Contact = () => {
                 <input type="text" placeholder="Name" value={name} onChange={(e)=> setName(e.target.value)} className="w-2/3 sm:w-[36rem] px-2 py-3 border-2 border-black border-solid outline-none rounded-lg" />
                 <input type="text" placeholder="Email" value={email} onChange={(e)=> setEmail(e.target.value)} className="w-2/3 sm:w-[36rem] px-2 py-3 border-2 border-black border-solid outline-none rounded-lg" />
                 <textarea placeholder="Message" value={message} onChange={(e)=> setMessage(e.target.value)} className="w-2/3 sm:w-[36rem] h-[10rem] sm:h-[16rem] resize-none px-2 py-3 border-2 border-black border-solid outline-none rounded-lg" />
-                <button onClick={submitHandler} className={`px-6 py-3 ${success? "bg-green-400" : "bg-slate-400"} text-white font-md text-lg rounded-2xl hover:-translate-y-2 active:translate-y-0 transition-all duration-300`}>
-                    {loading ? "Please Wait" : "Connect"}
+                <button onClick={submitHandler} className={`px-6 py-3 ${failed && "bg-red-400" || success && "bg-green-400" || "bg-slate-400"}  text-white font-md text-lg rounded-2xl hover:-translate-y-2 active:translate-y-0 transition-all duration-300`}>
+                    {loading ? "Please Wait" : "Connect"} 
                     {success && " Success"}
+                    {failed && " Failed"}
                 </button>
                 {error && <div className="text-rose-500 text-xl font-medium">All Fields are required</div>}
             </div>
