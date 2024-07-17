@@ -7,7 +7,7 @@ import Skill from "@/components/Skill";
 
 export default function Home() {
   return (
-    <main className="bg-gray-100 bg-gradient-to-br from-gray-200 to-gray-400 w-auto h-screen">
+    <main className="bg-gray-100 bg-gradient-to-br from-gray-200 to-gray-400 w-auto h-screen scroll-smooth">
       <Header />
       <Hero />
       <Skill />

@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link";
 const Project = () => {
     return (
-        <div className="h-auto w-[100%] pb-10 bg-gray-400">
+        <div id="" className="h-auto w-[100%] pb-10 bg-gray-400">
             <h1 className="px-auto text-center pt-10 text-2xl sm:text-4xl lg:text-6xl font-bold">PROJECTS</h1>
             <div className="flex flex-wrap gap-10 mx-auto w-[80%] md:gap-20 p-6 items-center justify-center">
                 <div className="object-cover flex flex-col justify-center items-center gap-4 rounded-2xl hover:shadow-lg hover:shadow-[#807f7c] relative transition-all project-code">

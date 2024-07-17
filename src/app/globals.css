@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+
+    html {
+        scroll-behavior: smooth;
+      }
     .project-code:hover::before {
         content: '';
         display: block;
