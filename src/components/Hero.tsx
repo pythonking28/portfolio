@@ -14,7 +14,7 @@ const Hero = () => {
               <Link href="https://www.linkedin.com/in/niraj-thakur-5bbaaa160/" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/linkedin.svg" alt="LinkedinProfile" width={36} height={36} className="w-24 sm:w-9 h-auto"></Image></Link>
               <Link href="https://github.com/pythonking28?tab=repositories" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/github.svg" alt="LinkedinProfile" width={36} height={36} className="w-24 sm:w-9 h-auto"></Image></Link>
               <Link href="https://www.facebook.com/niraj.thakur.52498/" target="_blank" className="border rounded-full p-2 sm:p-4"><Image src="/images/facebook.svg" alt="LinkedinProfile" width={36} height={36} className="w-24 sm:w-9 h-auto"></Image></Link>
-              <a href="/cv.pdf" target="_blank" download="cv" className="border rounded-full p-2 sm:p-4"><Image src="/images/cv.svg" alt="LinkedinProfile" width={24} height={24} className="w-24 h-auto"></Image></a>
+              <a href="/cv.pdf" target="_blank" download="cv" className="border rounded-full p-2 sm:p-4"><Image src="/images/cv.svg" alt="LinkedinProfile" width={24} height={24} className="w-24 sm:w-9 h-auto"></Image></a>
             </div>
             
         </div>
