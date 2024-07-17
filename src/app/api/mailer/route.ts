@@ -8,8 +8,8 @@ export const POST = async(req:any) => {
     const message = payload.message
 
     const mailOptions = {
-        from: process.env.MAILER_USERNAME,
-        to: email,
+        from: email,
+        to: process.env.MAILER_USERNAME,
         subject: "Let us connect",
         text: `name: ${name} \n message:${message}`,
       };
