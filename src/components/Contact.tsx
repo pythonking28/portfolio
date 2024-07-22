@@ -23,8 +23,6 @@ const Contact = () => {
               },
             body: JSON.stringify({name,email,message})
         })
-        console.log(response)
-        // const data = await response.json()
         setLoading(false)
         if(response.status === 500 || response.status === 400){
             setFailed(true)

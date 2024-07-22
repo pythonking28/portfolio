@@ -11,8 +11,6 @@ export const POST = async(req:any) => {
     const email = payload.email
     const message = payload.message
 
-    console.log(name, email, message)
-
     if(!email.includes('@')){
       return NextResponse.json({ message: "Success: email was not sent", status:400 },{status:400})
     }
@@ -26,8 +24,6 @@ export const POST = async(req:any) => {
         text: "This is only for typescript validation"
       });
 
-      // console.log(data)
-      // console.log(error)
   
       if (!resend) {
         return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
