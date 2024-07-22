@@ -21,7 +21,7 @@ export const POST = async(req:any) => {
     try {
 
 
-        const mail = transporter.sendMail(mailOptions, (error, info) => {
+        const mail = await transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
               NextResponse.json({ message: "COULD NOT SEND MESSAGE", status:400 },{status:400});
             } else {
