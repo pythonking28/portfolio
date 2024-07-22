@@ -16,14 +16,14 @@ const Contact = () => {
         }
         setError(false)
         setLoading(true)
-        const response = await fetch("/api/mailer",{
+        const response = await fetch("/api/send",{
             method: "POST",
             body: JSON.stringify({name,email,message})
         })
 
         const data = await response.json()
         setLoading(false)
-        if(data.status === 500 || data.status === 400){
+        if(response.status === 500 || response.status === 400){
             setFailed(true)
 
             setTimeout(()=>{
@@ -31,7 +31,7 @@ const Contact = () => {
             },2000)
             
         }
-        if(data.status === 200){
+        if(response.status === 200){
             setSuccess(true)
 
             setTimeout(()=>{
