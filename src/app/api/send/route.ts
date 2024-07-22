@@ -18,7 +18,7 @@ export const POST = async(req:any) => {
     }
 
     try {
-      const { data, error } = await resend.emails.send({
+      await resend.emails.send({
         from: 'Acme <onboarding@resend.dev>',
         to: [process.env.MAILER_USERNAME as string],
         subject: 'Lets Connect',
@@ -26,14 +26,14 @@ export const POST = async(req:any) => {
         text: "This is only for typescript validation"
       });
 
-      console.log(data)
-      console.log(error)
+      // console.log(data)
+      // console.log(error)
   
-      if (error) {
-        return NextResponse.json({ error }, { status: 500 });
+      if (!resend) {
+        return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
       }
   
-      return NextResponse.json({data},{status:200});
+      return NextResponse.json({data:"Message delivered successfully"},{status:200});
     } catch (error) {
       return NextResponse.json({ error }, { status: 500 });
     }
