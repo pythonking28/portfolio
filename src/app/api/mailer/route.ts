@@ -1,5 +1,5 @@
 import { NextResponse, NextRequest } from 'next/server'
-import transporter from '@/utils/EmailTransporter'
+import createTransporter from '@/utils/EmailTransporter'
 
 export const POST = async(req:any) => {
     const payload = await req.json()
@@ -20,9 +20,9 @@ export const POST = async(req:any) => {
 
     try {
 
-
+      const transporter = await createTransporter();
         const mail = await transporter.sendMail(mailOptions);
-
+        console.log(mail)
         if(!mail){
           console.log("No mail")
           return NextResponse.json({ message: "Success: email was not sent", status:400 },{status:400})
