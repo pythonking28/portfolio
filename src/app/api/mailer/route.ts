@@ -22,7 +22,6 @@ export const POST = async(req:any) => {
 
       const transporter = await createTransporter();
         const mail = await transporter.sendMail(mailOptions);
-        console.log(mail)
         if(!mail){
           console.log("No mail")
           return NextResponse.json({ message: "Success: email was not sent", status:400 },{status:400})
